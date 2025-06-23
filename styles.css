@@ -191,7 +191,7 @@ margin-right: 700px;
   }
 
   /* responsive design */  
-  @media (max-width:768px){
+  @media (max-width:450px){
 .indexImage{
     width: 400px;
 }
