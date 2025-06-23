@@ -192,9 +192,9 @@ margin-right: 700px;
 
   /* responsive design */  
   @media (max-width:768px){
-.indImage{
+    .indImage{
     width:400px;
-}
+      }
     h1{
         font-size:2rem;    
     }
