@@ -21,6 +21,40 @@ this.reset()
 })
 
 
+
+
+
+
+// =======================> Cookies <=============================
+
+
+function acceptCookies() {
+  document.getElementById("cookie-banner").style.display ="none";
+  localStorage.setItem("cookiesAccepted", "true")
+  loadAnalytics(); // GA4
+  
+}
+
+
+function declineCookies() {
+  document.getElementById("cookie-banner").style.display ="none";
+  localStorage.setItem("cookiesAccepted", "false")
+  loadAnalytics(); // GA4
+  
+}
+
+// on page load, check past choice
+
+window.onload = function () {
+  
+  if(localStorage.getItem("cookiesAccepted")==="true"){
+    loadAnalytics(); 
+  }else if (localStorage.getItem("cookiesAccepted")=="false"){
+    document.getElementById("cookie-banner").style.display ="none";
+  }
+}
+
+
 // show popup after 5 seconds
 setTimeout(function(){
   document.getElementById("email-popup").style.display="flex"
@@ -37,3 +71,4 @@ document.getElementById("email-popup").addEventListener("click",function(e){
   this.style.display="none";
  }
 });
+
