@@ -49,7 +49,7 @@ window.onload = function () {
   
   if(localStorage.getItem("cookiesAccepted")==="true"){
     loadAnalytics(); 
-  }else if (localStorage.getItem("cookiesAccepted")=="false"){
+  }else if (localStorage.getItem("cookiesAccepted")==="false"){
     document.getElementById("cookie-banner").style.display ="none";
   }
 }
@@ -71,4 +71,5 @@ document.getElementById("email-popup").addEventListener("click",function(e){
   this.style.display="none";
  }
 });
+
 
