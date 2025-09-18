@@ -39,7 +39,7 @@ function acceptCookies() {
 function declineCookies() {
   document.getElementById("cookie-banner").style.display ="none";
   localStorage.setItem("cookiesAccepted", "false")
-  loadAnalytics(); // GA4
+  // loadAnalytics(); // GA4
   
 }
 
@@ -49,6 +49,8 @@ window.onload = function () {
   
   if(localStorage.getItem("cookiesAccepted")==="true"){
     loadAnalytics(); 
+    document.getElementById("cookie-banner").style.display ="none";
+      
   }else if (localStorage.getItem("cookiesAccepted")==="false"){
     document.getElementById("cookie-banner").style.display ="none";
   }
@@ -71,6 +73,7 @@ document.getElementById("email-popup").addEventListener("click",function(e){
   this.style.display="none";
  }
 });
+
 
 
 
